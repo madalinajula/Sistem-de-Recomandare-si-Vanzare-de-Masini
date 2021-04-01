@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+   <!-- <style>
+        body {
+            background-image: url("static/images/carr.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+-->
+<meta charset="IS0-8859-1">
+ <title>CautMasina.ro</title>
+    <style>
+
+        .font-36{
+
+            font-size: 24px;
+
+        }
+
+    </style>
+</head>
+
+<body class="container"
+      style="background: antiquewhite" >
+
+<!--
+<div class="font-36" align="center">
+    <img th:src="@{images/car.jpg}" width="400" />
+</div>
+-->
+
+<div class="font-36" align="right" style="font-family: 'Century Gothic'">
+         <a href="users/create">  Sign in  </a>
+</div>
+<div class="font-36" align="right" style="font-family: 'Century Gothic'">
+             <a href="users/register">  Log in  </a>
+</div>
+
+<div class="font-36" align="center">
+    <img th:src="@{images/logo.webp}" width="100" />
+</div>
+
+<div class="font-36" align="center"
+     style="color: cornflowerblue; font-family: 'Arial Black'">
+    <h1 href="/home"> CautMasina.ro</h1>
+</div>
+
+<div class="font-36" align="left" style="font-family: 'Century Gothic'">
+     <a href="seller/register">  Ai o masina de vanzare? </a>
+</div>
+
+<div class="font-36" align="left" style="font-family: 'Century Gothic'">
+     <a href="users/index">  Aici urmaresti toti userii </a>
+</div>
+
+
+ <div class="font-36" align="left" style="font-family: 'Century Gothic'">
+     <a href="users/delete">  Daca vrei sa iti stergi contul, intra aici </a>
+ </div>
+
+<!--
+ <div class="font-36" align="left" style="font-family: 'Century Gothic'">
+     <a href="cars/update">  Update</a>
+ </div>
+-->
+
+<p>
+
+</p>
+ <div class="row">
+     <div class="column">
+         <img th:src="@{images/car1.jpeg}" width="400"/>
+         <img th:src="@{images/car.jpg}" width="400"/>
+         <img th:src="@{images/car2.jpeg}" width="400"/>
+     </div>
+     <!--
+     <div class="column">
+         <img th:src="@{images/car.jpg}" width="400"/>
+     </div>
+     <div class="column">
+         <img th:src="@{images/car2.jpeg}" width="400"/>
+     </div>-->
+</div>
+
+
+<div class="font-36" align="center"
+     style="color: crimson; font-family: 'Arial Black'">
+    <cite> <h1 href="/home"> Gaseste masina visurilor tale! </h1> </cite>
+</div>
+
+
+<div class="font-36" align="center" style="font-family: Elephant; font-size:30px"; >
+    <a href="cars/index">  Showroom de masini </a>
+</div>
+
+</body>
+</html>

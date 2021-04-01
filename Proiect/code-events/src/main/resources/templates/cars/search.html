@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+
+<head>
+    <meta charset="IS0-8859-1">
+    <title> Cauta-ti viitoarea masina </title>
+    <style>
+
+        .font-36{
+
+            font-size: 24px;
+
+        }
+
+        .rr-element {
+            white-space: nowrap;
+        }
+
+
+    </style>
+
+
+<body class="container">
+<div align="center" style="color: cornflowerblue">
+    <h1 href="/cars/search"> Cauta-ti viitoarea masina </h1>
+</div>
+
+<form method="post" >
+    <div class="form-group font-36" align="center">
+        <label>Pret minim
+            <input type="text" name="price" class="form-control">
+        </label>
+    </div>
+
+    <div class="form-group font-36" align="center">
+        <label>Pret maxim
+            <input type="text" name="price2" class="form-control">
+        </label>
+    </div>
+    <div class="form-group font-36" align="center">
+        <input type="submit" value = "Search" class="btn btn-success">
+
+    </div>
+
+
+    <table class="table font-36">
+        <thead>
+        <tr>
+            <th>Company</th>
+            <th>Model</th>
+            <th>Color</th>
+            <th>Rolled Kilometers</th>
+            <th>Year of Fabrication</th>
+            <th>Gearbox</th>
+            <th>Fuel</th>
+            <th>Price</th>
+            <th>Grade</th>
+
+        </tr>
+        </thead>
+        <tr th:each=" car : ${cars}">
+            <td th:text="${car.company}"></td>
+            <td th:text="${car.model}"></td>
+            <td th:text="${car.color}"></td>
+            <td th:text="${car.rolledKilometers}">
+            <td th:text="${car.year}"></td>
+            <td th:text="${car.gearbox}"></td>
+            <td th:text="${car.fuel}"></td>
+            <td th:text="${car.price}"></td></td>
+            <td th:text="${car.grade}"></td></td>
+        </tr>
+
+    </table>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="IS0-8859-1">
+    <title>All cars</title>
+    <style>
+
+        .font-36{
+
+            font-size: 24px;
+
+        }
+
+    </style>
+<body class="container"
+      style="background: antiquewhite" >
+
+<table class="table font-36">
+    <thead>
+    <tr>
+        <th>Company</th>
+        <th>Model</th>
+        <th>Color</th>
+        <th>Rolled Kilometers</th>
+        <th>Year of Fabrication</th>
+        <th>Gearbox</th>
+        <th>Fuel</th>
+        <th>Price</th>
+        <th>Grade</th>
+
+    </tr>
+    </thead>
+     <tr th:each=" car : ${cars}">
+         <td th:text="${car.company}"></td>
+         <td th:text="${car.model}"></td>
+         <td th:text="${car.color}"></td>
+         <td th:text="${car.rolledKilometers}">
+         <td th:text="${car.year}"></td>
+         <td th:text="${car.gearbox}"></td>
+         <td th:text="${car.fuel}"></td>
+         <td th:text="${car.price}"></td></td>
+         <td th:text="${car.grade}"></td></td>
+    </tr>
+
+</table>
+
+
+</body>
+</html>

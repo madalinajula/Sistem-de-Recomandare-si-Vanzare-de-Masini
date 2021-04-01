@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="IS0-8859-1">
+    <title>All users</title>
+    <style>
+
+        .font-36{
+
+            font-size: 24px;
+
+        }
+
+    </style>
+
+<body class="container"
+      style="background: antiquewhite" >
+
+<table class="table font-36">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>City</th>
+    </tr>
+    </thead>
+    <tr th:each=" user : ${users}">
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.username}"></td>
+        <td th:text="${user.password}"></td>
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.phone}"></td>
+        <td th:text="${user.city}"></td>
+    </tr>
+
+</table>
+
+
+</body>
+</html>

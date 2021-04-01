@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+
+    <meta charset="IS0-8859-1">
+    <title> Sterge masina </title>
+    <style>
+
+        .font-36{
+
+            font-size: 24px;
+
+        }
+
+    </style>
+<body class="container" >
+<div align="center" style="color: cornflowerblue">
+    <h1 href="cars/delete"> Sterge masina </h1>
+</div>
+
+<form method="post">
+    <table class="table font-36">
+    <thead>
+    <tr>
+        <th>Company</th>
+        <th>Model</th>
+        <th>Color</th>
+        <th>Rolled Kilometers</th>
+        <th>Year of Fabrication</th>
+        <th>Gearbox</th>
+        <th>Fuel</th>
+        <th>Price</th>
+        <th>Grade</th>
+
+    </tr>
+    </thead>
+    </table>
+    <th:block th:each="car : ${cars}">
+        <div class="form-group font-36">
+            <label>
+                <span th:text="${car.company}"></span>
+                <span th:text="${car.model}"></span>
+                <span th:text="${car.color}"></span>
+                <span th:text="${car.rolledKilometers}"></span>
+                <span th:text="${car.year}"></span>
+                <span th:text="${car.gearbox}"></span>
+                <span th:text="${car.fuel}"></span>
+                <span th:text="${car.price}"></span>
+                <span th:text="${car.grade}"></span>
+                <input type="checkbox" name="carIds" th:value="${car.id}" classs="form-control">
+            </label>
+        </div>
+    </th:block>
+
+    <input type="submit" value="Delete" class="btn btn-danger">
+
+</form>
+</body>
+</html>

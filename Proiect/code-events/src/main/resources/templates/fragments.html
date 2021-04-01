@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:fragment="head">
+    <meta charset="UTF-8"/>
+    <title>Caaaars</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+
+<nav th:fragment="header">
+    <ul class="nav">
+
+        <li class="nav-item"><a class="nav-link" href="/users">All cars </a></li>
+        <li class="nav-item"><a  class="nav-link" href="/users/create">Create Car</a></li>
+        <li class="nav-item"><a  class="nav-link" href="/users/delete">Delete Car</a></li>
+
+    </ul>
+</nav>
+
+<nav th:fragment="header2">
+    <ul class="nav">
+
+        <li class="nav-item"><a class="nav-link" href="/users">All users </a></li>
+        <li class="nav-item"><a  class="nav-link" href="/users/create">Create User</a></li>
+        <li class="nav-item"><a  class="nav-link" href="/users/delete">Delete User</a></li>
+
+    </ul>
+</nav>
+</body>
+</html>
